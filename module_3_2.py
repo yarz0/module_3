@@ -8,10 +8,11 @@ def send_email(message='', recepient='', sender="university.help@gmail.com"):
     elif sender != "university.help@gmail.com":
         massages = None
         messages.append(f"НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! письмо отправлено с адреса {sender} на адрес {recepient}")
-    elif "@" in email and (".com" in email or ".ru" in email or ".net" in email):
-        if "@" in email_1 and (".com" in email_1 or ".ru" in email_1 or ".net" in email_1):
-            massages = None
-            messages.append(f"Письмо отправлено с адреса {recepient} на адрес {sender}")
+    elif "@" in email:
+        if email.endswith(".com") or email.endswith(".ru") or email.endswith(".net"):
+            if email_1.endswith(".com") or email_1.endswith(".ru") or email_1.endswith:
+                massages = None
+                messages.append(f"Письмо отправлено с адреса {recepient} на адрес {sender}")
         else:
             massages = None
             messages.append("Некорректный адрес отправителя или получателя")
